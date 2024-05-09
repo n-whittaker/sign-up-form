@@ -52,6 +52,9 @@ table {
 
 body {
     min-width: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -60,10 +63,13 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
+    margin: auto auto;
 }
 
 .card {
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
     width: 90%;
     height: fit-content;
     margin-top: 5%;
@@ -92,7 +98,7 @@ body {
 
 .logo-img {
     width: clamp(66px, 18%, 80px);
-    height: auto;
+
 }
 
 .banner-text {
@@ -188,9 +194,43 @@ input {
 }
 
 
+@media screen and (min-width: 650px){
+    .card-container {
+        max-width: 1500px;
+    }
+
+    .card {
+        flex-direction: row;
+    }
+
+    .form-container {
+        flex: 5 4 auto;
+        max-width: 550px;
+    }
+
+    .form {
+        max-width: none;
+    }
+
+    .banner {
+        flex: 1 5 auto;
+        height: auto;
+        justify-content: center;
+    }
+
+    .logo-img {
+        width: clamp(40px, 50%, 120px);
+        margin-bottom: 40px;
+    }
+
+    .banner-text {
+        font-size: 2rem;
+        text-align: center;
+    }
 
 
-
+    
+}
 
 
 
