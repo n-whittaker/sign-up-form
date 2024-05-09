@@ -148,7 +148,23 @@ label {
 input {
     width: 100%;
     height: 30px;
+    appearance: none;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    padding: 0 7px;
+    box-shadow: inset 2px 2px 2px rgba(215, 215, 215, 0.3);
+    font-family: inherit;
 }
+
+/* Very basic form validation, need to write javascript form validation*/
+
+/*input:invalid {*/
+/*    border: 1px solid #d75151;*/
+/*}*/
+
+/*input:valid {*/
+/*    border: 1px solid #289f4a;*/
+/*}*/
 
 .inputs-container {
     display: flex;
@@ -187,10 +203,20 @@ input {
     font-weight: 600;
 }
 
+.submit:hover {
+    background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 100%, hsl(216, 51%, 76%) 0%);
+}
+
+
+
 .has-account > span {
     font-weight: 600;
     text-decoration: underline;
     color: #0a426c;
+}
+
+.has-account > span:hover {
+    color: #bdbdbd;
 }
 
 
