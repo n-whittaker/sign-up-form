@@ -51,10 +51,17 @@ table {
 }
 
 body {
-    min-width: 370px;
+    min-width: 320px;
     display: flex;
     justify-content: center;
-    align-items: center;
+
+}
+
+.background-img {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
 }
 
 
@@ -63,17 +70,16 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    margin: auto auto;
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    top: 50px;
     display: flex;
     flex-direction: column;
     width: 90%;
     height: fit-content;
-    margin-top: 5%;
-    /*border: 1px solid #d7d7d7;*/
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 13px 10px 39px -10px rgba(166, 166, 166, 0.75);
@@ -87,11 +93,10 @@ body {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    box-shadow: inset 10px 10px 30px rgba(210, 210, 210, 0.3);
+    box-shadow: inset 10px 10px 30px rgba(255, 255, 255, 0.3);
 
-
-    background: hsla(186, 33%, 94%, 1);
-    background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+    backdrop-filter: blur(40px);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 
@@ -112,6 +117,7 @@ body {
     height: 100%;
     /*border: 1px solid red;*/
     padding: 25px;
+    background-color: white;
 }
 
 .form {
@@ -223,6 +229,7 @@ input {
 @media screen and (min-width: 650px){
     .card-container {
         max-width: 1500px;
+        align-items: center;
     }
 
     .card {
