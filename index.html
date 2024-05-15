@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign up Form</title>
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -46,17 +46,19 @@
 
                         <div class="input-wrapper">
                             <label for="phone">Phone:</label>
-                            <input type="tel" name="phone" id="phone" class="phone-input" placeholder="02345 567 891" pattern="^\s*\d(?:\s*\d){10}\s*$">
+                            <input type="tel" required name="phone" id="phone" class="phone-input" placeholder="02345 567 891" pattern="^\s*\d(?:\s*\d){10}\s*$">
                         </div>
 
                         <div class="input-wrapper">
                             <label for="password">Password*:</label>
-                            <input type="password" name="password" id="password" class="password-input" maxlength="18" minlength="8">
+                            <input type="password" required name="password" id="password" class="password-input" placeholder=" " maxlength="18" minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" oninvalid="this.setCustomValidity('Password should be between 8-12 characters, and include: ' +
+                             ' 1 capital and 1 lowercase letter, 1 number and 1 special character (!@£$%#)')"
+                                   oninput="this.setCustomValidity('')"/>
                         </div>
 
                         <div class="input-wrapper">
                             <label for="confirm-pass">Confirm password*:</label>
-                            <input type="password" name="confirm-pass" id="confirm-pass" class="confirm-pass-input" maxlength="18" minlength="8">
+                            <input type="password" required  name="confirm-pass" placeholder=" " id="confirm-pass" class="confirm-pass-input" oninvalid="this.setCustomValidity('Passwords must match')" oninput="this.setCustomValidity('')"/>
                         </div>
 
                         <button type="submit" class="submit"> Create Account</button>

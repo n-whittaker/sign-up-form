@@ -162,17 +162,24 @@ input {
     font-family: inherit;
 }
 
+input:focus {
+    outline: none;
+}
+
+
 
 input:invalid:not(:placeholder-shown){
     border: 1px solid #d75151;
 }
 
+
+
 input:valid:not(:placeholder-shown)  {
     border: 1px solid #289f4a;
 }
 
-input:focus {
-    outline: none;
+input[type="password"]{
+    border: #2f2f2f;
 }
 
 .inputs-container {
